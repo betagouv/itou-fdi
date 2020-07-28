@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles/css/itou.css" type="text/css">
 </head>
 <body>
-
     <div class="layout">
         <header class="layout-section layout-section-white">
 
@@ -32,51 +31,86 @@
             </div>
         </div>
 
-<!--     <section class="layout-section home-search pb-5 pb-sm-0">
-        <div class="layout layout-column-full">
-            <h1 class="h2 text-center mt-5 mb-3 mx-4 text-light">Entreprise engagée pour l'inclusion</h1>
-            <h1 class="h2 text-center text-light">Vous cherchez à recruter</h1>
+        <section class="layout-section layout-section-white border-bottom">
+            <nav class="nav itou-main-nav ml-3">
+                <a class="nav-link active" href="/">Simulateur FDI</a>
+                <a class="nav-link" href="https://inclusion.beta.gouv.fr" rel="noopener" target="_blank">Plateforme de l'inclusion&nbsp;
+                    <img class="icon svg-nav" width="18" height="18" src="styles/icons/feather/external-link.svg">
+                </a>
+                <a class="nav-link" href="https://forum.inclusion.beta.gouv.fr" rel="noopener" target="_blank">Forum&nbsp;
+                    <img class="icon svg-nav" width="18" height="18" src="styles/icons/feather/external-link.svg">
+                </a>
+                <a class="nav-link" href="https://doc.inclusion.beta.gouv.fr/" rel="noopener" target="_blank">Documentation&nbsp;
+                    <img class="icon svg-nav" width="18" height="18" src="styles/icons/feather/external-link.svg">
+                </a>
+            </nav>
+        </section>
 
-            <div class="bg-image position-relative mt-sm-5 layout-column-full" style="background-image: url('images/home-bg.svg');"></div>
-        </div>
-    </section>
+        <section class="layout-section home-search pb-5 pb-sm-0">
+            <div class="layout layout-column-full">
+                <h1 class="h2 text-center mt-5 mb-md-3 mx-4 font-weight-bold">
+                    <span class="d-block">Simulateur de la demande d'aide</span>
+                    <span class="d-block">du Fonds Départemental d'Insertion (FDI)</span>
+                </h1>
 
-    <section class="row pt-5">
-        <div class="col-sm-8 offset-sm-2">
-            <h2 class="text-center h3 mx-5 pb-3">
-                <span class="d-block">Les entreprises de travail temporaire d'insertion</span>
-                <span class="d-block">peuvent vous aider</span>
-            </h2>
-            <div>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScoUWzxlCB2lQK82qDcaqC3pbUfCAGCv1wllunCwxX5EhdW_g/viewform?embedded=true" width="100%" height="2800px" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+                <div class="bg-image position-relative mt-md-5 layout-column-full"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="row p-5">
-        <div class="col-sm-8 offset-sm-2 text-center h5">
-            <p class="mb-4">
-                <span class="d-block">Cet espace est en construction pour développer</span>
-                <span class="d-block">les échanges commerciaux entre les entreprises engagées</span>
-                <span class="d-block">et les entreprises sociales inclusives.</span>
-            </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSefOxv4sbfoUKpTMN-K8QwxXtAkEHScLbYP4FEYypkVFk1KlA/viewform">
-                <button type="button" class="btn btn-lg btn-outline-primary">
-                    Participer à l'amélioration de ce service
-                </button>
-            </a>
-        </div>
-    </section> -->
+        <section id="simulator" class="layout-section p-5">
+            <div class="layout layout-column">
+                <h2 class="text-center"><span class="underline">Employeur solidaire</span>, pour connaître vos aides au FDI<br>
+                    veuillez répondre aux questions suivantes
+                </h2>
+            </div>
+        </section>
 
+        <section id="simulator" class="layout-section p-5">
+            <div class="layout layout-column text-center">
+                <p class="mb-0">Cet espace est en construction et en version Bêta.</p>
+                <p>Pour poser une question et échanger avec la communauté<br>
+                    venez découvrir le forum de l'inclusion.
+                <p>
+                    <a href="https://forum.inclusion.beta.gouv.fr" rel="noopener" target="_blank">
+                        <button type="button" class="btn btn-outline-secondary btn-lg">
+                            Accéder au forum
+                        </button>
+                    </a>
+                </p>
+            </div>
+        </section>
 
         <footer class="layout-section text-light text-center">
             <section class="layout layout-column-full bg-gray-700 p-5">
                 <p class="h5">
-                    Un service proposé par <a href="https://inclusion.beta.gouv.fr" target="_blank" class="text-reset text-decoration">inclusion.beta.gouv.fr</a>.
+                    Un service proposé par <a href="https://inclusion.beta.gouv.fr" target="_blank" class="text-reset underline">inclusion.beta.gouv.fr</a>.
                 </p>
             </section>
         </footer>
+        <div class="fixed-bottom down-button-container text-center p-3 d-md-none">
+            <a href="#">
+                <img class="icon" src="styles/icons/feather/chevrons-down.svg">
+            </a>
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(window).scroll(function() {
+            if ($(this).scrollTop()>0)
+             {
+                $('.down-button-container').fadeOut();
+             }
+            else
+             {
+              $('.down-button-container').fadeIn();
+             }
+         });
+        $(".down-button-container .icon").click(function() {
+            $('html, body').animate({ scrollTop: $('#simulator').offset().top}, 1000);
+        });
+    </script>
 
     <!-- Same Matomo ID as inclusion.beta.gouv.fr -->
     <script>

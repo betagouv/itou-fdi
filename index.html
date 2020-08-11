@@ -49,8 +49,8 @@
         <section class="layout-section home-search pb-5 pb-sm-0">
             <div class="layout layout-column-full">
                 <h1 class="h2 text-center mt-5 mb-md-3 mx-4 font-weight-bold">
-                    <span class="d-block">Simulateur de la demande d'aide</span>
-                    <span class="d-block">du Fonds Départemental d'Insertion (FDI)</span>
+                    <span class="d-block">Simulateur FDI de soutien aux SIAE</span>
+                    <span class="d-block">dans le contexte de la crise</span>
                 </h1>
 
                 <div class="bg-image position-relative mt-md-5 layout-column-full"></div>
@@ -59,17 +59,21 @@
 
         <section id="simulator" class="layout-section p-5">
             <div class="layout layout-column">
-                <a href="https://startupsbeta.typeform.com/to/twZWQV0o">
-                <h2 class="text-center"><span class="underline">Employeur solidaire</span>, pour connaître vos aides au FDI<br>
-                    veuillez répondre aux questions suivantes
+                <h2 class="text-center h3 w-sm-50 m-auto"><span class="underline">Structures d'insertion</span>, pour connaître le montant des aides auxquelles vous pouvez prétendre, veuillez répondre aux questions suivantes.
                 </h2>
-                </a>
+
+                <div
+                    class="typeform-widget"
+                    data-url="https://form.typeform.com/to/twZWQV0o"
+                    data-transparency="0"
+                    data-hide-headers=true
+                    style="width: 100%; height: 500px;">
+                </div>
             </div>
         </section>
 
         <section id="simulator" class="layout-section p-5">
             <div class="layout layout-column text-center">
-                <p class="mb-0">Cet espace est en construction et en version Bêta.</p>
                 <p>Pour poser une question et échanger avec la communauté<br>
                     venez découvrir le forum de l'inclusion.
                 <p>
@@ -112,6 +116,25 @@
         $(".down-button-container .icon").click(function() {
             $('html, body').animate({ scrollTop: $('#simulator').offset().top}, 1000);
         });
+    </script>
+
+    <!-- Typeform script -->
+    <script>
+      (function() {
+        var qs,js,q,s,d=document,
+            gi=d.getElementById,
+            ce=d.createElement,
+            gt=d.getElementsByTagName,
+            id="typef_orm",
+            b="https://embed.typeform.com/";
+        if(!gi.call(d,id)) {
+            js=ce.call(d,"script");
+            js.id=id;
+            js.src=b+"embed.js";
+            q=gt.call(d,"script")[0];
+            q.parentNode.insertBefore(js,q)
+        }
+      })()
     </script>
 
     <!-- Same Matomo ID as inclusion.beta.gouv.fr -->
